@@ -100,6 +100,10 @@ class AdminController extends Controller
         $request->image->move('chefimage', $imagename);
         $data->image = $imagename;
 
+        $data->name = $request->name;
+        $data->specilaty = $request->specialty;
+        $data->save();
+        return redirect()->back();
 
     }
 }
