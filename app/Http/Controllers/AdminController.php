@@ -96,6 +96,9 @@ class AdminController extends Controller
     public function uploadchef(Request $request){
         $data= new foodchef;
         $image=$request->image;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('chefimage', $imagename);
+        $data->image = $imagename;
 
 
     }
