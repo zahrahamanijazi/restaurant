@@ -31,6 +31,11 @@ Route::post('/reservation',[Admincontroller::class,'reservation']);
 Route::get('/viewreservation',[Admincontroller::class,'viewreservation']);
 Route::get('/viewchef',[Admincontroller::class,'viewchef']);
 Route::post('/uploadchef',[Admincontroller::class,'uploadchef']);
+
+Route::get('/updatechef/{id}',[Admincontroller::class,'updatechef']);
+
+Route::post('/updatefoodchef/{id}',[Admincontroller::class,'updatefoodchef']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

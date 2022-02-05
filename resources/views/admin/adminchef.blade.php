@@ -32,6 +32,24 @@
         <input type="submit" value="Save">
     </form>
 
+    <div>
+        <table bgcolor="black">
+            <tr>
+                <th style="padding: 30px">Name</th>
+                <th style="padding: 30px">Specialty</th>
+                <th style="padding: 30px">Image</th>
+                <th style="padding: 30px">Action</th>
+            </tr>
+            @foreach($data as $d)
+                <tr align="center">
+                    <td>{{$d->name}}</td>
+                    <td>{{$d->specialty}}</td>
+                    <td><img width="100" height="100" src="/chefimage/{{$d->image}}"></td>
+                    <td> <a href="{{url('/updatechef',$d->id)}}">Update</a></td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 
 </div>
 @include('admin.adminscript')
