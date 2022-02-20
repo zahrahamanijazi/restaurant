@@ -35,7 +35,7 @@
 
     <div>
         <label>New image</label>
-        <input type="file" required="">
+        <input type="file" name="image">
     </div>
     <div>
 

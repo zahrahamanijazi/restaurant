@@ -139,6 +139,15 @@ function updatechef($id)
     return view('admin.updatechef', compact('data'));
 }
 
+    public
+    function deletechef($id)
+    {
+        $data = foodchef::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+
 public
 function viewchef()
 {

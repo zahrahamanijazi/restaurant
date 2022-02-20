@@ -46,6 +46,7 @@
                     <td>{{$d->specialty}}</td>
                     <td><img width="100" height="100" src="/chefimage/{{$d->image}}"></td>
                     <td> <a href="{{url('/updatechef',$d->id)}}">Update</a></td>
+                    <td> <a href="{{url('/deletechef',$d->id)}}">Delete</a></td>
                 </tr>
             @endforeach
         </table>
