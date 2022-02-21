@@ -79,7 +79,7 @@
                                     Carts[{{$count}}]
                                 @endauth
                                 @guest()
-                                    Carts[]
+                                    Carts[guest]
                                 @endguest
                             </a></li>
                         <li class="submenu">
