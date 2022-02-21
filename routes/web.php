@@ -32,6 +32,9 @@ Route::get('/viewreservation',[Admincontroller::class,'viewreservation']);
 Route::get('/viewchef',[Admincontroller::class,'viewchef']);
 Route::post('/uploadchef',[Admincontroller::class,'uploadchef']);
 
+Route::post('/addcart/{id}',[HomeController::class,'addcart']);
+
+
 Route::get('/deletechef/{id}',[Admincontroller::class,'deletechef']);
 
 Route::get('/updatechef/{id}',[Admincontroller::class,'updatechef']);
