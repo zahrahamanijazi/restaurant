@@ -76,10 +76,14 @@
                         <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
                         <li class="scroll-to-section"><a href="#chefs">
                                 @auth()
-                                    Carts[{{$count}}]
+                                    <a href="{{url('/showcart', Auth::user()->id)}}">
+                                        Carts[{{$count}}]
+                                    </a>
                                 @endauth
                                 @guest()
+
                                     Carts[guest]
+
                                 @endguest
                             </a></li>
                         <li class="submenu">
